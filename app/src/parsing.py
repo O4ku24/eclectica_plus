@@ -1,6 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
-from app.src.db import session_paks, session_titan
+from db import session_paks, session_titan
 
 def pars_titan(url:str,
                teg:str,
@@ -73,7 +73,7 @@ def pars_titan_product_name(url_kategoru:str,
 
     for product_name, product_status, product_price, product_img in zip(products_name_list, products_status_list, products_price_list_2, url_img_list):
         session_titan.add_product_in_kategory(name_table, product_name, product_status, product_price, product_img)
-    print('Спиздили')
+
 
         
         

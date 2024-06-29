@@ -3,9 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eclectica-plus</title>
+    <title>Shop</title>
 </head>
 <body>
-    <h1>Eclectica</h1>
+    <div style="text-align: center;">
+        <h1>SHOP</h1>
+        <button id="btn_list">Shop list</button>
+    </div>
+    <script>
+        const btn_shop_list = document.getElementById('btn_list')
+        btn_shop_list.addEventListener('click', function(){
+            open('list')
+        })
+    </script>
 </body>
 </html>

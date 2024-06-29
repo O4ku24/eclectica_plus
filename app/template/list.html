@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shop list</title>
+</head>
+<body>
+    <style>
+        .product{
+            text-align: center;
+            border: 2px black solid;
+        }
+    </style>
+    <div class="product">
+        <h1>SHOP LIST</h1>
+    
+        <h2 id="product">{{ data }}</h2>
+        
+        <button id="btn-bay">Bay</button>
+    </div>
+    <div id="list">
+        
+    </div>
+    <script>
+        const url_list = 'http://127.0.0.1:8000/list_bay/'
+        const product = document.getElementById('product')
+        const btn_bay = document.getElementById('btn-bay')
+        fetch(url_list)
+        response = response.json
+        console.log(response)
+        
+            
+        
+        
+        name = document.createElement('p')
+    </script>
+</body>
+</html>
