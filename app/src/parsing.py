@@ -13,7 +13,7 @@ def pars_titan(url:str,
     for i in text:
         seo_text.append(i.text)
 
-    return len(seo_text), seo_text
+    return seo_text
 
 def pars_titan_product_name(url_kategoru:str,
                             name_table:str,
