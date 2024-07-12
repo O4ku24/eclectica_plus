@@ -49,7 +49,7 @@ def pars_titan_product_name(url_kategoru:str,
     products_price = soup.find_all(teg_price, class_price)
     products_price_list_1 = []
     for i in products_price:
-        products_price_list_1.append(i.text)
+        products_price_list_1.append(i.text.replace(' ', ''))
     products_price_list_2 = []
     for el in products_price_list_1:
         products_price_list_2.append(el.replace(' ', ''))

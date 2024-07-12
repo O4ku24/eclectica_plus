@@ -26,9 +26,15 @@
         const url_list = 'http://127.0.0.1:8000/list_bay/'
         const product = document.getElementById('product')
         const btn_bay = document.getElementById('btn-bay')
-        fetch(url_list)
-        response = response.json
-        console.log(response)
+        responce = fetch(new Request(url_list)).then(
+            responce => responce.json()
+        ).then(
+            content => responce.push(data)
+        )
+        
+        console.log(data)
+        
+        
         
             
         

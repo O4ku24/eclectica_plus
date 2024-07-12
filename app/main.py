@@ -2,6 +2,7 @@ from fastapi import FastAPI, Request
 from fastapi.templating import Jinja2Templates
 import uvicorn
 from src.db import session_titan
+from fastapi.responses import Response
 
 app = FastAPI()
 templates = Jinja2Templates(directory='template')
@@ -17,11 +18,17 @@ def get_list(request: Request):
 @app.get('/list_bay/')
 def list(request: Request):
     database = session_titan.get_table_data('readyMadeSolutions')
+    name_data = []
+    
     for i in database:
         
-        for j in i:
-            data = {"data": j}
-    return templates.TemplateResponse(request=request, data=data, name='list.html')
+
+        name_data.append({"name":i[1]})
+    
+    print(name_data)
+        
+            
+    return Response(content=name_data)
 
 
 
